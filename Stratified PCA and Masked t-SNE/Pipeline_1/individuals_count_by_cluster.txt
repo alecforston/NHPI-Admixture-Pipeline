@@ -1,0 +1,5 @@
+CEU	150
+Other	37
+MEX	89
+CHB	129
+YRI	186
