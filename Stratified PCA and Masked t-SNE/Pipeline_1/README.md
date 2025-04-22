@@ -40,7 +40,11 @@ individuals_count_by_cluster.txt should have one row for each of the starting cl
 running the script, this file should look exactly as follows:
 
 CEU     150
+
 Other   37
+
 MEX     89
+
 CHB     129
+
 YRI     186
