@@ -1,11 +1,7 @@
 # How to use Pipeline 1
 We created a conda environment with the latest versions of both PLINK and pandas, and activated the environment. 
 
-## Installing Dependencies
-conda create –n environment_name
-conda activate environment_name
-conda install bioconda::plink
-conda install anaconda::pandas
+## Directory Layout
 
 In our working directory, we made two subdirectories, named “inputs” and “intermediates.” The names of these subdirectories
 are included in the script, so these directories must be in the directory where the script is run. These subdirectories 
@@ -21,8 +17,10 @@ We ran the pipeline.sh script, which does all the work. The arguments of the scr
 script: “p” specifies that the input files are PLINK output files. Next is the prefix for the plink input files. The final argument
 is the path to the “3 columns” file described above. Thus, to run it with the provided input files, the line is as following:
 
+```bash
 sbatch pipeline.sh p hapmap_subset
 inputs/hapmap_subset_3cols.txt
+```
 
 If the script is able to run properly, the intermediates directory should have several files for each of the starting clusters.
 To be specific, each cluster should have a .bed, .bim, .fam, .grm.bin, .grm.id, .grm.N.bin, .hh, .log, .txt, .eigenval and .eigenvec file.
@@ -48,3 +46,12 @@ MEX     89
 CHB     129
 
 YRI     186
+
+## Dependencies
+
+```bash
+conda create –n environment_name
+conda activate environment_name
+conda install bioconda::plink
+conda install anaconda::pandas
+```
