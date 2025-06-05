@@ -18,6 +18,8 @@ pip install sklearn-crfsuite==0.3.6
 pip install ray
 
 # Install mamba/conda packages
+conda install mamba -n base -c conda-forge
+mamba install plink
 mamba install -y tqdm==4.62.3
 mamba install -y -c anaconda openblas
 mamba install -y -c bioconda bcftools
