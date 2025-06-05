@@ -97,6 +97,7 @@ while IFS=$'\t' read -r chunk_id chr_id buffered_region imp_region length num_ta
     echo "  Buffer region:     ${chr_id}:${buf_start}-${buf_end}"
     echo "  Output file:       ${output_file}"
 
+    # Impute each chunk
     "$IMPUTE5_BIN" \
         --h "$REFERENCE_FILE" \
         --g "$TARGET_FILE" \
