@@ -15,7 +15,8 @@ plink --bfile Plink_African_Subset_Check_LD_Update --extract pruned_sites_Africa
 # Takes the Plink file input African_Subset_ld_filtered_data_LD_Update and recode it to a VCF called African_Subset_ld_filtered_data_LD_Update_VCF
 plink --bfile African_Subset_ld_filtered_data_LD_Update --recode vcf --out African_Subset_ld_filtered_data_LD_Update_VCF
 
-# These commands take the Plink file African_Subset_ld_filtered_data_LD_Update and then produces pca eiganvalues and eiganvectors called GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated.eigenval and GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated.eigenvec. This is for our data before we have performed masking. 
+# Take the Plink file African_Subset_ld_filtered_data_LD_Update and produce pca eiganvalues and eiganvectors called GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated.eigenval and GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated.eigenvec.
+# This is for our data before we have performed masking. 
 gcta --bfile African_Subset_ld_filtered_data_LD_Update --make-grm --out GCTA_African_Subset_ld_filtered_data_LD_Update
 gcta --grm GCTA_African_Subset_ld_filtered_data_LD_Update --pca 20 --out GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated
 
