@@ -20,7 +20,7 @@ plink --bfile African_Subset_ld_filtered_data_LD_Update --recode vcf --out Afric
 gcta --bfile African_Subset_ld_filtered_data_LD_Update --make-grm --out GCTA_African_Subset_ld_filtered_data_LD_Update
 gcta --grm GCTA_African_Subset_ld_filtered_data_LD_Update --pca 20 --out GCTA_Plink_AfricanSubset_Results_LD_Pruned_Updated
 
-##This runs Gnomix on the vcf file called African_Subset_ld_filtered_data_LD_Update_VCF.vcf and prodces .msp map file and phased vcf file in data_2 directory. This command figures out which SNPs need to be masked.
+# Run G-Nomix on the vcf file called African_Subset_ld_filtered_data_LD_Update_VCF.vcf and prodce .msp map file and phased vcf file in data_2 directory. This command figures out which SNPs need to be masked.
 python ~/path_to_gnomix/gnomix.py African_Subset_ld_filtered_data_LD_Update_VCF.vcf /data_2 2 True ~/path_to_model/model_chm_2.pkl
 
 # Impute data, run T-sne, and produce figures
