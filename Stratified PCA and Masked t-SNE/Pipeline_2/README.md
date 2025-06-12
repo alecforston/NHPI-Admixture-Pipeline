@@ -74,7 +74,7 @@ pip install ray
 
 mamba install bioconda::gcta
 
-mamba install plink
+mamba install bioconda::plink
 
 mamba install conda-forge::r-base
 
